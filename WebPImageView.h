@@ -16,17 +16,12 @@ typedef void (^WebPAnimationFinished)(NSInteger);
 /**
  Set the image to display.
  */
-@property(nonatomic)WebPImage *image;
+@property(nonatomic, strong)WebPImage *image;
 
 /**
 fetch the image from disk or remotely.
  */
 @property(nonatomic)NSURL *url;
-
-/**
- expose the progress and finished blocks for image setting from URL
- */
-- (void)setUrl:(NSURL*)url progress:(WebPImageProgress)progress finished:(WebPImageFinished)finished;
 
 /**
  Show a loading view will the image gets fetched.
